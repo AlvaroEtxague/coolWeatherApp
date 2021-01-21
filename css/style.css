@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(-45deg, #d8a28c, #d37556, #194a50, #cebeb9);
+  background-size: 400% 400%;
+  position: relative;
+  animation: change 20s ease-in-out infinite;
+  font-family: 'Lato', sans-serif;
+}
+
+.container {
+  letter-spacing: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 7rem 15rem;
+  -moz-box-shadow: inset 0 0 3px 3px #fff;
+  -webkit-box-shadow: inset 0 0 3px 3px#fff;
+  box-shadow: 0 2px 2px #fff, inset 0 0 3px 3px #fff;
+}
+
+#location-div,
+#icon-canvas-div,
+#temperature-div,
+#input-div {
+  margin: 2%;
+  padding: 20px;
+}
+
+.location-timezone {
+  font-size: 2em;
+}
+
+#icon-canvas-div canvas {
+  padding: 1%;
+  margin: auto;
+  display: block;
+  width: 10rem;
+}
+
+#temperature-div {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+#temperature-subelement {
+  margin: 2% 0;
+  padding: 3%;
+  font-size: 1rem;
+}
+
+.city-input {
+  width: 90%;
+  border: #959595;
+  border-radius: 4px;
+  margin: 5px;
+  outline: none;
+  padding: 5%;
+  box-sizing: border-box;
+  text-align: center;
+  font-weight: 100;
+  color: #929292;
+}
+
+@keyframes change {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    width: 80%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+    position: absolute;
+  }
+
+  #location-div,
+  #icon-canvas-div,
+  #temperature-div,
+  #input-div {
+    margin: 2%;
+    padding: 20px;
+  }
+
+  #temperature-subelement {
+    margin: 1.5% 0;
+    padding: 3%;
+    font-size: 0.7rem;
+  }
+
+  #icon-canvas-div canvas {
+    margin: auto;
+  }
+
+  .location-timezone {
+    font-size: 1.5em;
+  }
+}
+@media screen and (max-height: 500px) {
+  .container {
+    width: 60%;
+    transform: translate(-50%, -50%);
+    padding: 1rem 2rem;
+  }
+
+  #location-div,
+  #icon-canvas-div,
+  #temperature-div,
+  #input-div {
+    margin: 2%;
+    padding: 10px;
+  }
+
+  #temperature-subelement {
+    margin: 1% 0;
+    padding: 2%;
+    font-size: 0.8rem;
+  }
+
+  #icon-canvas-div canvas {
+    margin: auto;
+  }
+
+  .location-timezone {
+    font-size: 1.5em;
+  }
+
+  .city-input {
+    padding: 2%;
+    border-radius: 3px;
+    border: #959595;
+  }
+}
